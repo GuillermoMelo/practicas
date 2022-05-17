@@ -1,0 +1,20 @@
+def sumar_todos(a,b,c):
+        return ()
+#l=[]
+
+#n=int(input("ingrese numero "))
+
+#while n != 00:
+    #l.append(n) 
+    #n=int(input("ingrese numero "))
+
+
+a= 1
+b= 3
+c= 99
+    
+suma= sumar_todos(a,b,c,219)
+print(suma) # 322
+
+suma= sumar_todos(a+1,b+1,c+2)
+print(suma) # 106
