@@ -1,0 +1,149 @@
+Ejercicio 6 con modulos.
+n=5
+def suma_iterativa(numero):
+    micontador= numero
+    while numero != 0:
+        numero-=1
+        micontador+=numero
+    print(micontador)
+
+def formula():
+    print((n*(n+1))/2)
+
+suma_iterativa(n)
+formula()
+
+#ejercicio 1
+nombre= input("ingrese su nombre: ")
+def modulo_saludos(nombre="humano"):
+    print(f" ¡hola {nombre} !")
+modulo_saludos(nombre)
+modulo_saludos()
+
+#ejercicio 2
+def multiplo(numero):
+    return (numero*numero)
+numero= int(input("ingrese su numero"))
+print("el resultado es", multiplo(numero))
+
+#ejercicio 3
+def comparacion(n,n1):
+    if n>n1:
+        return (n)
+    else:
+        return(n1)
+n= int(input("ingrese su numero"))
+n1= int(input("ingrese su numero"))
+print("el mayor es", comparacion(n,n1))
+
+#ejercicio 4
+def esCero(unNumero):
+    if unNumero !=0 :
+        return(False)
+    else:
+        return(True)
+        
+unNumero= int(input("ingrese un numero"))
+if esCero(unNumero):
+    print ("Es cero")
+else:
+    print ("No es cero")
+#Ejercicio 5
+impuesto= float(input("ingrese su monto: "))
+iva=input("ingrese un porcentaje)")
+def monto(impuesto,iva):
+    if iva!="":
+        iva=float(iva)
+        return(((impuesto*iva)/100)+impuesto)
+    else:
+        return(((impuesto*21)/100)+impuesto)
+print("el total a pagar es", monto(impuesto,iva))
+
+#Ejercicio 6
+def menor (n1,n2):
+    if n1<n2:
+        return n1
+    else:
+        return n2
+def mayor (n1,n2):
+    if n1>n2:
+        return n1
+    else:
+        return n2
+n= int(input("ingrese un numero "))
+v, v1=n, n
+while n >=0:
+    v= mayor (n,v)
+    v1= menor (n,v1)
+    n= int(input("ingrese un numero "))
+print (f"el maximo es {v} y el minimo es {v1}")
+
+#ejercicio 7
+
+import random
+def numeros():
+    dado=random.randint(1,6)
+    return dado
+def acierto(dado,n):
+    if dado==n:
+        return True
+    else:
+        return False
+n=int(input("eliga un numero "))
+# numeros() No hace nada
+pc= numeros()
+while not acierto(n,pc):
+    print (pc)
+    n=int(input("eliga un numero "))
+
+print ("ganaste")
+
+#ejercicio 8 SIN TERMINAR
+import random
+def numeros():
+    dado=random.randint(1,3)
+    return dado
+def empate(n,eleccion):
+    if n==eleccion:
+        return True
+    else:
+        return False
+def ganados(n,eleccion):
+    if n==1 and eleccion==3:
+        return True
+    elif n==2 and eleccion==1:
+        return True
+    elif n==3 and eleccion==2:
+        return True
+    else:
+        return False
+n=int(input("escoja 1 para piedra , 2 para papel , 3 para tijera y 4 para salir  "))
+micontador=0
+g=0
+p=0
+e=0
+eleccion= numeros()
+empate(n,eleccion)
+ganados(n,eleccion)
+while n!=4:
+    micontador+=1
+    if ganados(n,eleccion):
+        g+=1
+    else:
+        p+=1
+    print (eleccion)
+    n=int(input("eliga un numero "))
+
+print ("fin del juego")
+print ("jugastes un total de:",str(micontador)+"partidas")
+print ("ganaste", (ganados),"perdiste", (perdidos),"y empataste",(empates))
+
+#prueba lista:
+from random import *
+nombre=input("ingrese su nombre ")
+l= []
+while nombre != "profesorX" :
+    l.append (nombre)
+    nombre=input("ingrese su nombre ")
+a = choice(l)
+print (f"el ganador es {a} ")

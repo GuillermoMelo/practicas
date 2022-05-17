@@ -1,0 +1,117 @@
+#ejercicio 1:
+lista1=[1,2,3,4,5,6,7]
+lista2=[]
+for e in lista1:
+    lista2.append(e*e)
+print (lista2)
+
+#ejercicio 2:
+import random
+l=[]
+for e in range(100):
+    l.append (random.randint(-1000,1000))
+print (l)
+res = sum(l)
+print("la suma es:" + str(res))
+pro= sum(l)/100
+print("el promedio es:" + str(pro))
+
+#ejercicio 3:
+
+inicio=1
+final=1001
+print(list(range(inicio,final)))
+
+#ejercicio 4:
+def maxima (tem,temmax,dia):
+    if tem>temmax:
+        global diacalor
+        diacalor=dia
+        return tem
+    else:
+        return temmax
+def minima (tem,temmin,dia):
+    if tem<temmin:
+        global diafrio
+        diafrio=dia
+        return tem
+    else:
+        return temmin
+temmax=0
+temmin=50
+diacalor= 0
+diafrio=0
+dias=["domingo","lunes","martes","miercoles","jueves","viernes","sabado"]
+for d in dias:
+    tem=float(input(f"ingrese la temperatura para el dia {d}: "))
+    temmin=minima(tem,temmin,d)
+    temmax=maxima(tem,temmax,d)
+print (f"el dia de mas calor fue el {diacalor} con una temperatura max{temmax} y el dia con mas frio fue el dia {diafrio} con una temperatura min{temmin}")
+
+#ejercicio 5:
+l=[10, 20, [300, 400, [5000, 6000], 500], 30, 40]
+l[2][2].insert(2, 7000)
+print (l)
+
+#ejercicio 6:
+numero=int(input("ingrese cantidad de lista "))
+palabra=input("ingrese una palabra ")
+contador=numero-1
+l=[palabra] 
+while contador != 0:
+    contador -= 1
+    palabra=input("ingrese una palabra ")
+    l.append(palabra)
+print(l)
+
+#ejercicio 7:
+numero=int(input("ingrese cantidad de lista "))
+palabra=input("ingrese una palabra ")
+contador=numero-1
+l=[palabra] 
+while contador != 0:
+    contador -= 1
+    palabra=input("ingrese una palabra ")
+    l.append(palabra)
+print(l)
+busqueda=input("ingrese la palabra que desea buscar ")
+resultado= l.count(busqueda)
+print("la palabra que se repite", str (resultado))
+
+#ejercicio 8:
+numero=int(input("ingrese cantidad de lista "))
+palabra=input("ingrese una palabra ")
+contador=numero-1
+l=[palabra] 
+l2=["popis","chucha", "pingo"]
+while contador != 0:
+    palabra=input("ingrese una palabra ")
+    if palabra in l2:
+        print("maldito cochino es una palabra prohibida")
+    else:
+        contador -= 1
+        l.append(palabra)
+print(l)
+
+#ejercicio 9
+
+import random
+nombre=input("ingrese participante ")
+l=[]
+l1=[]
+while nombre != "*":
+    l.append (nombre)
+    l1.append(nombre)
+    nombre=input("ingrese participante ")
+while l!= []:
+    s=random.choice(l)
+    s1=random.choice(l1)
+    while s==s1:
+       s1=random.choice(l1)
+
+    l.remove(s)
+    l1.remove(s1)
+
+    print("los amigos invisibles son", (s), "y", (s1))
+#EJERCICIO 10
+
