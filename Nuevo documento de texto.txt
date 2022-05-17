@@ -1,13 +1,5 @@
-def sumar_todos(a,b,c):
-        return ()
-#l=[]
-
-#n=int(input("ingrese numero "))
-
-#while n != 00:
-    #l.append(n) 
-    #n=int(input("ingrese numero "))
-
+def sumar_todos(*suma):
+        return (sum(suma))
 
 a= 1
 b= 3
