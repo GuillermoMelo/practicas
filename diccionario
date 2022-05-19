@@ -1,0 +1,7 @@
+p=input("ingrese palabra ")
+def histograma (p):
+    for a in p:
+        d[a]=p.count(a)
+d={}
+histograma(p)
+print (d)
