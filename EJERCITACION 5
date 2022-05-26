@@ -1,0 +1,46 @@
+EJERCICIO 1:
+def frase():
+    global p
+    p=(input("ingrese texto: "))
+
+def conteo():
+    conta=0
+    for i in p:
+        if(i.isalpha()):
+            conta+=1
+    print("la cantidad de letras son: ", conta)
+
+
+frase()
+conteo()
+EJERCICIIO 2:
+def variable():
+    p=(input("ingrese palabra: "))
+    for i in p:
+        print (i)
+    
+
+variable()
+EJERCICIO 3:
+def frase():
+    global p
+    p=(input("ingrese texto: ")).lower()
+
+def conteo():
+    l=(input("ingrese una letra a buscar: ").lower())
+    conta=0
+    for i in p:
+        if(i.isalpha()):
+            if(l==i):
+                conta+=1
+    print("la letra",l, "se repite",conta,"veces")
+
+frase()
+conteo()
+EJERCICIO 4:
+
+EJERCICIO 5:
+
+EJERCICIO 6:
+
+EJERCICIO 7:
