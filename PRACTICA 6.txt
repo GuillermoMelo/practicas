@@ -1,0 +1,45 @@
+EJERCICIO 1:
+dinero={'Dolar':'$', 'Euro':'€', 'Yen':'¥', 'Peso argentino':'$'}
+
+p=(input("ingrese una divisa: "))
+
+print(dinero.get(p))
+EJERCICIO 2:
+dinero={'Dolar':'$', 'Euro':'€', 'Yen':'¥', 'Peso argentino':'$'}
+e=int(input("ingrese monto en pesos: "))
+p=(input("ingrese una divisa para convertir: "))
+
+a= 1
+b = 127.07
+c=e/b
+print("el valor de: ",e,"$ equivale a: ",c,"€" )
+EJERCICIO 3:
+p={'Mayonesa':140.50, 'Cerveza': 130, 'Agua mineral': 110.15, "Servilleta": 65.20}
+c=input("ingrese articulo: ")
+v=0
+while c!="fin":
+    
+    if c=="parcial":
+        print(f"Parcial compra {v}")
+    else:
+        n=int(input("ingrese cantidad: "))
+        v=v+(p[c]*n)
+        print (f"{n} cantidad de {c} valen {p[c]*n}")
+    c=input("ingrese articulo: ")
+    while not c in p and c!= "parcial" and c!= "fin":
+        print ("el articulo no existe, ingrese uno valido")
+        c=input("ingrese articulo: ")
+print (v)
+EJERCICIO 4:
+
+EJERCICIO 5:
+
+EJERCICIO 6:
+
+EJERCICIO 7:
+
+EJERCICIO 8:
+
+EJERCICIO 9:
+
+EJERCICIO 10:
