@@ -31,11 +31,58 @@ while c!="fin":
         c=input("ingrese articulo: ")
 print (v)
 EJERCICIO 4:
-
+d = {
+    "clase": {
+        "estudiante": {
+            "nombre": "Marcos",
+            "materias": {
+                "matematica": 7,
+                "geografia": 8
+            }
+        }
+    }
+}
+#print(d.get("clase").get("estudiante").get("materias").get("geografia"))
+print(d["clase"]["estudiante"]["materias"]["geografia"])
 EJERCICIO 5:
+def notas():
+    d["clase"]["estudiante"]["materias"]["matematica"]=8
+    d["clase"]["estudiante"]["materias"]["geografia"]=7
+    return (d["clase"]["estudiante"]["materias"])
+d = {
+    "clase": {
+        "estudiante": {
+            "nombre": "Marcos",
+            "materias": {
+                "matematica": 7,
+                "geografia": 8
+            }
+        }
+    }
+}
+#print(d.get("clase").get("estudiante").get("materias").get("geografia"))
 
+notas()
+print(d)
 EJERCICIO 6:
+def notas():
+    d["clase"]["estudiante"]["materias"]["historia"]=d["clase"]["estudiante"]["materias"]["geografia"]
+    del d["clase"]["estudiante"]["materias"]["geografia"]
+d = {
+    "clase": {
+        "estudiante": {
+            "nombre": "Marcos",
+            "materias": {
+                "matematica": 7,
+                "geografia": 8
+            }
+        }
+    }
+}
+#print(d.get("clase").get("estudiante").get("materias").get("geografia"))
 
+notas()
+print(d)
 EJERCICIO 7:
 
 EJERCICIO 8:
